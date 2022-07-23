@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9c9c9;
+}
+
+.gallery__items {
+  width: 960px;
+  margin: 10px auto;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.pic__wrap {
+  height: 300px;
+  overflow: hidden;
+  filter: grayscale(1);
+  transition: filter, box-shadow, 0.8s;
+}
+
+.pic__wrap:hover {
+  filter: grayscale(0);
+  box-shadow: 0 0 10px 0px #333;
+}
+
+.pic__wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__window {
+  position: relative;
+  box-shadow: 0 0 20px 0px #333;
+  overflow: hidden;
+}
+
+.modal__window img {
+  width: 100%;
+  max-height: 90vh;
+}
+
+.modal__window h3 {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+}
+
+.modal__window button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 10px;
+  margin: 0;
+  background: #000;
+  border: none;
+  border-bottom-left-radius: 4px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
